@@ -1,0 +1,11 @@
+.App {
+  margin: 0 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 1.5rem 0;
+}
