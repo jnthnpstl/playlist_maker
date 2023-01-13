@@ -76,7 +76,7 @@ function Tracks(props) {
     const tracks = await getRecommendation(seed);
 
     const addTracks = await addTracksToPlaylist(tracks, playlist);
-    console.log("Success beh", addTracks);
+
     setLoading("");
   };
 
@@ -125,9 +125,6 @@ function Tracks(props) {
               <button className={loading}>
                 <span className="button__text">Create a playlist</span>
               </button>
-              {/* <input type="button" className={loading}>
-                <span className="button__text">Create a playlist</span>
-              </input> */}
             </form>
           </div>
         </div>

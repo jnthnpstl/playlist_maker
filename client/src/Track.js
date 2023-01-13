@@ -1,8 +1,5 @@
-import axios from "axios";
 import React, { useState } from "react";
 import "./Track.css";
-
-// import "./animation.js";
 
 export default function Track(props) {
   const [pause, setPause] = useState("play");
@@ -18,9 +15,6 @@ export default function Track(props) {
     });
   };
   const pausePlay = (e) => {
-    // console.log(props.Fun(e));
-    // isOtherAudioPlaying();
-
     if (e.target.className.includes("paused")) {
       setPause("play");
       e.target.children[0].pause();
@@ -33,8 +27,6 @@ export default function Track(props) {
   const createPlaylist = async (e) => {
     props.showFunc();
     props.getSeed(e.target.id);
-    // let tracks = await getRecommendation(e.target.id);
-    // console.log(tracks);
   };
   return (
     <div>
