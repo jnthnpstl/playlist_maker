@@ -16,9 +16,7 @@ function App() {
   return (
     <div className="App">
       <Searchbar func={fetchData} />
-      <button className="create-button" onClick={createPlaylist}>
-        Create Playlist
-      </button>
+
       <Tracks tracks={data ? data : null} />
     </div>
   );
