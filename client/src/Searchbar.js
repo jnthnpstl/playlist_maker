@@ -39,6 +39,7 @@ function Searchbar(props) {
 
           <input
             onChange={handleChange}
+            required
             type="text"
             className="search-input"
             placeholder="Search a track"

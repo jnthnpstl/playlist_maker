@@ -23,13 +23,13 @@ app.use(express.urlencoded({ extended: true }));
 var SpotifyWebApi = require("spotify-web-api-node");
 
 var spotifyApi = new SpotifyWebApi({
-  clientId: "Client ID",
-  clientSecret: "Client Secret",
+  clientId: "",
+  clientSecret: "",
   redirectUri: "http://localhost:8888/callback ",
 });
 
 spotifyApi.setAccessToken(
-  "BQB3O0Jr3BN7gwrJcXhRcnLpPCIWPCx3-toBWKfLTX5xK1udwqI6kpd_k5OnkLNcSFnxAYukGkPAkOLpmcZgKvutFx6Osg5OtemO1E7pbfTbjoTv2gLF1Lt1qJuw7kuT6ZHrSr3UWJC0hsCmgxiSev1qp5ZTqJixWTHZJgEDy0HM3PKyTAvkK-iKM7EVtkXaPgi4Emyse33J3JR4LxQX-GAMoz03tVCoVSYGCY5aBrcLng-C9Ak8h9gH8pyljxI6fzs24Nx5PTB0Bw"
+  "BQAUtthDP67JJyiNUG7tANNPt7jjBcRCY4LeICRhxrmhgQxZpWkRI9VpK9lua6JcpUQOHkboFqSyCVgnnECZIxLQ9rY85pp3EqD4ADgufohCiavfagmMN-NjVsyv5JDlSYBfgXXqzE8-Crtqv_e6o41zeS1hj6Q1iX2EQ3TaUejixSIs3DPYR-FQ9tljTzS_0PHCx-5GuoMBvX2voKWirNQ9H4NYWW7HWvw6SZqNT1vMm5uVcSXsbgGZxkbeu6yt"
 );
 
 app.get("/search/:track", function (req, res) {

@@ -69,7 +69,6 @@ function Tracks(props) {
   const createPlaylist = async (e) => {
     e.preventDefault();
     setLoading("button--loading");
-    setState({ ...state, [e.target.name]: "" });
     const id = await getMe();
     const data = { title: state.title, description: state.description };
     const playlist = await createAPlaylist(data);
@@ -77,7 +76,9 @@ function Tracks(props) {
 
     const addTracks = await addTracksToPlaylist(tracks, playlist);
 
+    e.target.reset();
     setLoading("");
+    setShow("");
   };
 
   const setInput = (e) => {

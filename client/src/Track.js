@@ -65,9 +65,10 @@ export default function Track(props) {
 
             {props.track.artists.map((artist, index) => {
               return (
-                <p className="artist-name" key={index}>
+                <span className="artist-name" key={index}>
                   {artist.name}
-                </p>
+                  {index + 1 === props.track.artists.length ? " " : ", "}
+                </span>
               );
             })}
           </div>
